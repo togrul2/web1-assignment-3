@@ -1,0 +1,31 @@
+.header {
+    height: 4rem;
+    background-color: var(--bg-color-primary);
+    display: flex;
+    justify-content: start;
+    padding: .7rem 1.6rem;
+}
+
+.navigation {
+    margin-left: 1.5rem;
+    align-self: center;
+}
+
+.list {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    padding: .45rem;
+    color: var(--color-primary);
+}
+
+.link:hover {
+    color: var(--color-primary-light);
+    background-color: var(--bg-color-primary-light);
+    border-radius: .4rem;
+}
