@@ -1,10 +1,11 @@
 import './App.css';
-import {lazy} from "react";
+import React, {lazy, Suspense} from "react";
 import {Route, Routes} from "react-router-dom";
 
 import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
 import Main from "@/layout/Main";
+import Loader from "@/components/Loader";
 
 // pages
 const Home = lazy(() => import("@/pages/Home"));
@@ -20,12 +21,31 @@ export default function App() {
       <Header/>
       <Main>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/contact-me' element={<ContactMe/>}/>
-          <Route path='/movies' element={<Movies/>}/>
-          <Route path='/movies/:movieId' element={<Movie/>}/>
-
-          <Route path='*' element={<Http404NotFound/>}/>
+          <Route path='/' element={
+            <Suspense fallback={<Loader/>}>
+            <Home/>
+            </Suspense>
+          }/>
+          <Route path='/contact-me' element={
+            <Suspense fallback={<Loader/>}>
+              <ContactMe/>
+            </Suspense>
+          }/>
+          <Route path='/movies' element={
+            <Suspense fallback={<Loader/>}>
+              <Movies/>
+            </Suspense>
+          }/>
+          <Route path='/movies/:movieId' element={
+            <Suspense fallback={<Loader/>}>
+              <Movie/>
+            </Suspense>
+          }/>
+          <Route path='*' element={
+            <Suspense fallback={<Loader/>}>
+              <Http404NotFound/>
+            </Suspense>
+          }/>
         </Routes>
       </Main>
       <Footer/>
