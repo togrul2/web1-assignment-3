@@ -6,7 +6,7 @@ import logo from "@/assets/logo.svg";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <img src={logo} alt=""/>
+      {/*<img src={logo} alt=""/>*/}
       <nav className={styles.navigation}>
         <ul className={styles.list}>
           <li><NavLink to='/' className={styles.link}>Home</NavLink></li>
