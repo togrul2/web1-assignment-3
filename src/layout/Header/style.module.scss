@@ -22,10 +22,10 @@
     text-decoration: none;
     padding: .45rem;
     color: var(--color-primary);
-}
 
-.link:hover {
-    color: var(--color-primary-light);
-    background-color: var(--bg-color-primary-light);
-    border-radius: .4rem;
+    &:hover {
+        color: var(--color-primary-light);
+        background-color: var(--bg-color-primary-light);
+        border-radius: .4rem;
+    }
 }

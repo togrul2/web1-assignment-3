@@ -23,7 +23,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={
             <Suspense fallback={<Loader/>}>
-            <Home/>
+              <Home/>
             </Suspense>
           }/>
           <Route path='/contact-me' element={
