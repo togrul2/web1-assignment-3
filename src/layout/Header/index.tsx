@@ -1,12 +1,9 @@
 import {NavLink} from "react-router-dom";
 import styles from './style.module.scss';
-import logo from "@/assets/logo.svg";
-
 
 export default function Header() {
-  return (
+    return (
     <header className={styles.header}>
-      <img src={logo} alt=""/>
       <nav className={styles.navigation}>
         <ul className={styles.list}>
           <li><NavLink to='/' className={styles.link}>Home</NavLink></li>
