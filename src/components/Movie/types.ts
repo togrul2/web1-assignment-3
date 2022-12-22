@@ -17,3 +17,7 @@ export type Movie = {
   No_of_Votes: string,
   Gross: string,
 }
+
+export type Props = {
+  item: Movie
+};
