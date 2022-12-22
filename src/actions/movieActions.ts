@@ -7,11 +7,13 @@ export async function getMovies(page: number = 1, limit: number = 10) {
   const response = await fetch(url);
 
   if (response.status !== 200) {
-    return {data: null, error: "Error occurred, try again."}
+    return {data: [], total: 0, error: "Error occurred, try again."}
   }
 
+  const total = Number(response.headers.get('X-Total-Count'));
+
   const body: Movie[] = await response.json();
-  return {data: body, error: null};
+  return {data: body, total, error: null};
 }
 
 export async function getMovie(movieId: number) {
