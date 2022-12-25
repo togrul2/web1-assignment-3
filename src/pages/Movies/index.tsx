@@ -50,7 +50,7 @@ export default function Movies() {
   return (
     <>
       <h1>Movies</h1>
-      {error && <Alert severity="error">{error}</Alert>}
+      {error && <Alert sx={{my: 3}} severity="error">{error}</Alert>}
       <Grid container spacing={2}>
         {movies.map(movie => (
           <MovieItem xs={4} key={movie.id} item={movie}/>
