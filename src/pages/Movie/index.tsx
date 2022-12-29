@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import {Movie} from "@/components/Movie/types";
 import MovieCard from "@/components/Movie";
 import {getMovie} from "@/actions/movieActions";
+import {Alert} from "@mui/material";
 
 export default function () {
   const {movieId} = useParams();
@@ -24,11 +25,9 @@ export default function () {
     })();
   }, [movieId]);
 
-  console.log(movie);
-
   return (
     <>
-      {error && <h2>error</h2>}
+      {error && <Alert sx={{my: 3}} severity="error">{error}</Alert>}
       {movie && <MovieCard item={movie}/>}
     </>
   );
