@@ -1,10 +1,11 @@
 import {BACKEND_URL} from "@/config";
 import {Movie} from "@/components/Movie/types";
+import {ListMoviesResponse, MovieDetailsResponse} from "./types"
 
-const NETWORK_ERR_MSG = "Network error occurred. " +
+export const NETWORK_ERR_MSG = "Network error occurred. " +
   "Check your internet connection or reload this page.";
 
-export async function getMovies(page: number = 1, limit: number = 10) {
+export async function getMovies(page: number = 1, limit: number = 10): Promise<ListMoviesResponse> {
   const params = new URLSearchParams({_page: String(page), _limit: String(limit)});
   const url = `${BACKEND_URL}/movies?${params.toString()}`;
   try {
@@ -23,7 +24,7 @@ export async function getMovies(page: number = 1, limit: number = 10) {
   }
 }
 
-export async function getMovie(movieId: number) {
+export async function getMovie(movieId: number): Promise<MovieDetailsResponse> {
   try {
     const response = await fetch(`${BACKEND_URL}/movies/${movieId}`);
 
@@ -33,7 +34,7 @@ export async function getMovie(movieId: number) {
 
     const body: Movie = await response.json();
     return {data: body, error: null};
-  } catch (err) {
+  } catch {
     return {data: null, error: NETWORK_ERR_MSG};
   }
 }
