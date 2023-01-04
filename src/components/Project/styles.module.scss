@@ -1,0 +1,12 @@
+.tag {
+  padding: .08em .55em;
+  border: 2px solid var(--bg-color-primary);
+  background-color: var(--bg-color-primary-light);
+  border-radius: 1em;
+  color: var(--color-primary-light);
+}
+
+.tags {
+  display: flex;
+  gap: .8em;
+}

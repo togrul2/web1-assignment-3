@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Weather app",
+    "author": "Toghrul Asadov",
+    "description": "Web app for fetching weather based on city, coordinates and current location of a user.",
+    "technologies": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "github_link": "https://togrul2.github.io/weather.html"
+  }
+]
