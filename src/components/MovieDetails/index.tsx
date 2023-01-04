@@ -37,7 +37,6 @@ export default function ({item}: Props) {
             <p className="about-item">Director</p>
             <p className="about-item">{item.Director}</p>
           </div>
-
           <div className="stars-container">
             <p className="stars-text">Stars</p>
             <ul className="stars-list">
