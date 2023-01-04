@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea} from '@mui/material';
 
+
 import {Props} from "./types";
 import {useNavigate} from "react-router-dom";
 

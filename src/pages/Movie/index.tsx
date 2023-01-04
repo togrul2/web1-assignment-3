@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {Movie} from "@/components/Movie/types";
 import MovieCard from "@/components/Movie";
+import MovieDetails from "@/components/MovieDetails";
 import {getMovie} from "@/actions/movieActions";
 import {Alert} from "@mui/material";
 import Http404NotFound from "@/components/Http404NotFound";
@@ -33,7 +34,7 @@ export default function () {
   return (
     <>
       {error && <Alert sx={{my: 3}} severity="error">{error}</Alert>}
-      {movie && <MovieCard item={movie}/>}
+      {movie && <MovieDetails item={movie}/>}
     </>
   );
 }
