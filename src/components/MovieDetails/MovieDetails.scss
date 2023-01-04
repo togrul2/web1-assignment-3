@@ -15,12 +15,16 @@
   }
 
   .movie-rating {
-    position: relative;
-    right: -170px;
+    position: fixed;
+    right: 270px;
   }
 
   .rating-star {
     color: var(--bg-color-primary);
+  }
+
+  .overview-container {
+    width: 70%;
   }
 
   .movie-overview {
