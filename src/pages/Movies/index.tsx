@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from "react";
-import Grid from '@mui/material/Grid';
+import {useNavigate} from "react-router-dom";
 import {Alert, TablePagination} from "@mui/material";
 
 import {getMovies} from "@/actions/movieActions";
 import {Movie} from "@/components/Movie/types";
-import MovieCard from "@/components/Movie";
-import {MovieItemProps} from "@/pages/Movie/types";
-import {useNavigate} from "react-router-dom";
+import MoviesTable from "@/components/MoviesTable";
+import styles from "./styles.module.scss";
 
 export default function Movies() {
   const params = new URLSearchParams(location.search);
@@ -35,7 +34,7 @@ export default function Movies() {
     })()
   }, [page, limit]);
 
-  const handleChangePage = (e: React.MouseEvent<HTMLElement> | null, localPage: number) => {
+  const handleChangePage = (e: React.MouseEvent | null, localPage: number) => {
     navigate(`?page=${localPage}&limit=${limit}`);
   };
 
@@ -43,21 +42,18 @@ export default function Movies() {
     navigate(`?page=${page}&limit=${Number(e.target.value)}`);
   };
 
-  const MovieItem = ({item, xs}: MovieItemProps) => (
-    <Grid item xs={xs}><MovieCard item={item}/></Grid>
-  );
+  const handleRowClick = (e: React.MouseEvent, movieId: number) => {
+    navigate(`/movies/${movieId}`);
+  };
 
   return (
     <>
-      <h1>Movies</h1>
+      <h1 className={styles.title}>Movies</h1>
       {error && <Alert sx={{my: 3}} severity="error">{error}</Alert>}
-      <Grid container spacing={2}>
-        {movies.map(movie => (
-          <MovieItem xs={4} key={movie.id} item={movie}/>
-        ))}
-      </Grid>
+      <MoviesTable data={movies} onRowClick={handleRowClick}/>
       {total !== 0 && (
         <TablePagination
+          className={styles.pagination}
           component="div"
           count={total}
           page={page}

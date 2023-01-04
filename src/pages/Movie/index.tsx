@@ -4,12 +4,12 @@ import {Movie} from "@/components/Movie/types";
 import MovieCard from "@/components/Movie";
 import {getMovie} from "@/actions/movieActions";
 import {Alert} from "@mui/material";
+import Http404NotFound from "@/components/Http404NotFound";
 
 export default function () {
   const {movieId} = useParams();
   const [movie, setMovie] = useState<Movie | null>(null);
   const [error, setError] = useState<string | null>(null);
-  document.title = "";  // movie title
 
   useEffect(() => {
     (async () => {
@@ -22,8 +22,13 @@ export default function () {
       }
       setError(null);
       setMovie(movie);
+      document.title = movie!.Series_Title;
     })();
   }, [movieId]);
+
+  if (error === "Not found") {
+    return <Http404NotFound/>;
+  }
 
   return (
     <>

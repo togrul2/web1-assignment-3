@@ -1,7 +1,5 @@
-export default function Http404NotFound() {
-  document.title = "404 Not Found";
+import Http404NotFound from "@/components/Http404NotFound";
 
-  return (
-    <>Not found</>
-  );
+export default function () {
+  return <Http404NotFound/>;
 }
