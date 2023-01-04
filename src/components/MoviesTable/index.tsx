@@ -5,14 +5,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {Movie} from "@/components/Movie/types";
-import {MouseEvent} from "react";
 import {truncateString} from "@/utils";
+import {TableProps} from "@/components/MoviesTable/types";
 
-interface TableProps {
-  data: Movie[];
-  onRowClick: (e: MouseEvent, movieId: number)=>void;
-}
 
 export default function (props: TableProps) {
   return (

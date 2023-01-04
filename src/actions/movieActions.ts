@@ -1,5 +1,5 @@
 import {BACKEND_URL} from "@/config";
-import {Movie} from "@/components/Movie/types";
+import {Movie} from "@/components/MovieDetails/types";
 import {ListMoviesResponse, MovieDetailsResponse} from "./types"
 
 export const NETWORK_ERR_MSG = "Network error occurred. " +

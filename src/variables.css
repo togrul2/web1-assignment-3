@@ -1,10 +1,12 @@
 :root {
-    --bg-color-primary: #646cff;
-    --bg-color-primary-light: #6f76fc;
+  --bg-color-primary: #646cff;
+  --bg-color-primary-light: #6f76fc;
 
-    --bg-color-secondary: #322;
-    --bg-color-tertiary: #322;
+  --bg-color-secondary: #322;
+  --bg-color-tertiary: #322;
 
-    --color-primary: #eae5e5;
-    --color-primary-light: #f8f8f8;
+  --color-primary: #eae5e5;
+  --color-primary-light: #f8f8f8;
+
+  --primary-font: Roboto
 }

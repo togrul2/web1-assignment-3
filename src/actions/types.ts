@@ -1,4 +1,4 @@
-import {Movie} from "@/components/Movie/types";
+import {Movie} from "@/components/MovieDetails/types";
 
 export interface ListMoviesResponse {
   data: Movie[];

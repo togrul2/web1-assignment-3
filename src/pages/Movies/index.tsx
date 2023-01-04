@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {Alert, TablePagination} from "@mui/material";
 
 import {getMovies} from "@/actions/movieActions";
-import {Movie} from "@/components/Movie/types";
+import {Movie} from "@/components/MovieDetails/types";
 import MoviesTable from "@/components/MoviesTable";
 import styles from "./styles.module.scss";
 
@@ -50,7 +50,7 @@ export default function Movies() {
     <>
       <h1 className={styles.title}>Movies</h1>
       {error && <Alert sx={{my: 3}} severity="error">{error}</Alert>}
-      <MoviesTable data={movies} onRowClick={handleRowClick}/>
+      {movies.length > 0 && <MoviesTable data={movies} onRowClick={handleRowClick}/>}
       {total !== 0 && (
         <TablePagination
           className={styles.pagination}

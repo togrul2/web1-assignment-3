@@ -1,8 +1,6 @@
-import './App.css';
 import React, {lazy, Suspense} from "react";
 import {Route, Routes} from "react-router-dom";
 
-import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
 import Main from "@/layout/Main";
 import Loader from "@/components/Loader";
@@ -48,7 +46,6 @@ export default function App() {
           }/>
         </Routes>
       </Main>
-      <Footer/>
     </>
   );
 }
