@@ -16,7 +16,9 @@ export default function ({item}: Props) {
           <p className="movie-rating"><span className="rating-star"><FontAwesomeIcon
             icon="star"/></span> {item.IMDB_Rating}</p>
         </div>
-        <h5 className="movie-overview">{item.Overview}</h5>
+        <div className="overview-container">
+          <h5 className="movie-overview">{item.Overview}</h5>
+        </div>
         <div className="about">
           <p className="about-the-movie-text">About the movie</p>
           <div className="details-container">
@@ -35,7 +37,6 @@ export default function ({item}: Props) {
             <p className="about-item">Director</p>
             <p className="about-item">{item.Director}</p>
           </div>
-
           <div className="stars-container">
             <p className="stars-text">Stars</p>
             <ul className="stars-list">
