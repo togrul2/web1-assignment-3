@@ -7,18 +7,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Movie} from "@/components/Movie/types";
 import {MouseEvent} from "react";
+import {truncateString} from "@/utils";
 
 interface TableProps {
   data: Movie[];
   onRowClick: (e: MouseEvent, movieId: number)=>void;
-}
-
-function truncate(str: string, limit: number): string {
-  let res = str.slice(0, limit);
-  if (res.length < str.length) {
-    res += "...";
-  }
-  return res;
 }
 
 export default function (props: TableProps) {
@@ -50,7 +43,7 @@ export default function (props: TableProps) {
                 </TableCell>
               <TableCell align="right">{movie.Series_Title}</TableCell>
               <TableCell align="right">{movie.IMDB_Rating}</TableCell>
-              <TableCell align="right">{truncate(movie.Overview, 100)}</TableCell>
+              <TableCell align="right">{truncateString(movie.Overview, 100)}</TableCell>
               <TableCell align="right">{movie.Genre}</TableCell>
               <TableCell align="right">{movie.Runtime}</TableCell>
             </TableRow>

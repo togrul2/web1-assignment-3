@@ -7,6 +7,7 @@ import {CardActionArea} from '@mui/material';
 
 import {Props} from "./types";
 import {useNavigate} from "react-router-dom";
+import {truncateString} from "@/utils";
 
 
 export default function ({item}: Props) {
@@ -15,11 +16,6 @@ export default function ({item}: Props) {
   const handleCardClick = () => {
     navigate(`/movies/${item.id}`);
   };
-
-  const truncateString = (text: string, limit: number) =>
-    text.length > limit ?
-      text.substring(0, limit - 3) + "..." :
-      text;
 
   return (
     <Card sx={{maxWidth: 345, height: 360}}>
