@@ -22,5 +22,17 @@
       "javascript"
     ],
     "github_link": "https://naliyeeva.github.io/weather/index.html"
+  },
+  {
+    "id": 2,
+    "title": "Weather app",
+    "author": "Madina Rustamova",
+    "description": "Web app for fetching weather based on city, coordinates and current location of a user.",
+    "technologies": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "github_link": "https://rmadina.github.io/WeatherAppM/"
   }
 ]
