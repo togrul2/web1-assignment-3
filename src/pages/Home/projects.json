@@ -58,5 +58,28 @@
       "react.js"
     ],
     "github_link": "https://github.com/naliyeeva/reactCarFeedback"
+  },
+  {
+    "id": 5,
+    "title": "Digital Business Card",
+    "author": "Madina Rustamova",
+    "description": "This is the app that you can see my personal business card",
+    "technologies": [
+      "html",
+      "css"
+    ],
+    "github_link": "https://rmadina.github.io"
+  },
+  {
+    "id": 5,
+    "title": "My First Web Page",
+    "author": "Madina Rustamova",
+    "description": "Here, you can see, all projects that I have done",
+    "technologies": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "github_link": "https://rmadina.github.io/MyFirstWebPage-/"
   }
 ]
