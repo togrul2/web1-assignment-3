@@ -10,5 +10,17 @@
       "javascript"
     ],
     "github_link": "https://togrul2.github.io/weather.html"
+  },
+  {
+    "id": 2,
+    "title": "Weather app",
+    "author": "Nazrin Aliyeva",
+    "description": "Web app for fetching weather based on city, coordinates and current location of a user.",
+    "technologies": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "github_link": "https://naliyeeva.github.io/weather/index.html"
   }
 ]
