@@ -1,0 +1,23 @@
+.notFoundPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh;
+  align-items: center;
+}
+
+.error404, .errorText {
+  text-align: center;
+}
+
+.span404, .errorDescription {
+  color: var(--bg-color-primary);
+}
+
+.error404 {
+  font-size: 80px;
+}
+
+.errorText {
+  margin-top: 10px;
+}
