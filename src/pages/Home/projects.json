@@ -24,7 +24,7 @@
     "github_link": "https://naliyeeva.github.io/weather/index.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Weather app",
     "author": "Madina Rustamova",
     "description": "Web app for fetching weather based on city, coordinates and current location of a user.",
@@ -34,5 +34,29 @@
       "javascript"
     ],
     "github_link": "https://rmadina.github.io/WeatherAppM/"
+  },
+  {
+    "id": 4,
+    "title": "Quiz App",
+    "author": "Nazrin Aliyeva",
+    "description": "Quiz for assessing How Well Do You Know Me",
+    "technologies": [
+      "html",
+      "scss",
+      "vue.js"
+    ],
+    "github_link": "https://github.com/naliyeeva/vueQuiz"
+  },
+  {
+    "id": 5,
+    "title": "Car Feedback",
+    "author": "Nazrin Aliyeva",
+    "description": "App about adding, filtering, and viewing the list of cars",
+    "technologies": [
+      "html",
+      "scss",
+      "react.js"
+    ],
+    "github_link": "https://github.com/naliyeeva/reactCarFeedback"
   }
 ]
