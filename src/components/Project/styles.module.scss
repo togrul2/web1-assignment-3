@@ -8,5 +8,6 @@
 
 .tags {
   display: flex;
-  gap: .8em;
+  flex-wrap: wrap;
+  gap: .15em;
 }

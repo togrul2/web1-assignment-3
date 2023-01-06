@@ -60,7 +60,7 @@
     "github_link": "https://github.com/naliyeeva/reactCarFeedback"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Digital Business Card",
     "author": "Madina Rustamova",
     "description": "This is the app that you can see my personal business card",
@@ -71,7 +71,7 @@
     "github_link": "https://rmadina.github.io"
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "My First Web Page",
     "author": "Madina Rustamova",
     "description": "Here, you can see, all projects that I have done",
@@ -81,5 +81,30 @@
       "javascript"
     ],
     "github_link": "https://rmadina.github.io/MyFirstWebPage-/"
+  },
+  {
+    "id": 8,
+    "title": "Digital Card",
+    "author": "Toghrul Asadov",
+    "description": "My personal digital card.",
+    "technologies": [
+      "html",
+      "css"
+    ],
+    "github_link": "https://togrul2.github.io/card.html"
+  },
+  {
+    "id": 9,
+    "title": "Chat app",
+    "author": "Togrul Asadov",
+    "description": "Chat app API built with FastAPI. Allows users to find each other, make friends and chat together.",
+    "technologies": [
+      "python",
+      "FastAPI",
+      "docker",
+      "PostgreSQL",
+      "redis"
+    ],
+    "website_link": "https://github.com/togrul2/chatapp-api"
   }
 ]

@@ -1,5 +1,5 @@
 import './ContactMe.scss';
-import {Button} from '@mui/material';
+import {Alert, Button} from '@mui/material';
 import React, {FormEvent, useRef, useState} from "react";
 
 import {sendEmail} from "@/actions/contactMeActions";
@@ -16,6 +16,7 @@ export default function ContactMe() {
 
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const {error} = await sendEmail({
       subject: subjectRef.current!.value,
       email: emailAddressRef.current!.value,
@@ -47,7 +48,7 @@ export default function ContactMe() {
         </div>
 
         <Button type="submit" variant="contained">Submit</Button>
-        {error && <div>{error}</div>}
+        {error && <Alert severity="error">{error}</Alert>}
       </form>
     </>
   );
