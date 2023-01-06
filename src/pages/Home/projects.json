@@ -105,6 +105,6 @@
       "PostgreSQL",
       "redis"
     ],
-    "website_link": "https://github.com/togrul2/chatapp-api"
+    "website": "https://github.com/togrul2/chatapp-api"
   }
 ]
