@@ -15,7 +15,7 @@ export default function (props: CardProps) {
   const project = props.project;
 
   return (
-    <Card sx={{minWidth: 275}}>
+    <Card sx={{minWidth: 275, minHeight: 280}}>
       <CardContent>
         <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
           By: {project.author}
